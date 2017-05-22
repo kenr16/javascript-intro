@@ -2,6 +2,22 @@ function Calculator(skinName) {
   this.skin = skinName;
 }
 
+Calculator.prototype.add = function(num1, num2) {
+  return num1 + num2;
+};
+
+Calculator.prototype.subtract = function(num1, num2) {
+  return num1 - num2;
+};
+
+Calculator.prototype.multiply = function(num1, num2) {
+  return num1 * num2;
+};
+
+Calculator.prototype.divide = function(num1, num2) {
+  return num1 / num2;
+};
+
 Calculator.prototype.pingPong = function(goal) {
   var output = [];
   for (var i = 1; i <= goal; i++) {
@@ -16,6 +32,6 @@ Calculator.prototype.pingPong = function(goal) {
     }
   }
   return output;
-}
+};
 
 exports.calculatorModule = Calculator;
